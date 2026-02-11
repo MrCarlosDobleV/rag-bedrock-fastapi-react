@@ -8,6 +8,11 @@ The system is explicitly **prompt-tuned and pipeline-constrained** so that the l
 
 ---
 
+## Demo Video
+
+[AcademicPapersRAGAssistant.webm](https://github.com/user-attachments/assets/8099ac55-0510-4e1e-8679-de1be9be0ba9)
+
+
 ## Purpose and Scope
 
 This project targets research-oriented use cases such as:
@@ -34,6 +39,8 @@ FastAPI Backend
         |-- Amazon Nova Micro (constrained generation)
 ```
 
+---
+
 ## RAG Pipeline and Grounding Strategy
 
 The backend implements a structured RAG pipeline using LangChain components:
@@ -57,6 +64,8 @@ The language model is instructed to:
 - Explicitly abstain from answering when the documents do not contain sufficient information
 
 - This approach ensures that answers are traceable to specific papers, sections, and pages, reducing unsupported or fabricated outputs.
+
+---
 
 ## Technology Stack
 ### Backend
@@ -83,6 +92,8 @@ The language model is instructed to:
 
 - TypeScript
 
+---
+
 ## Backend API Design
 
 The FastAPI backend exposes a minimal and well-defined API:
@@ -105,6 +116,8 @@ Accepts a natural-language question and an optional paper filter. Retrieves rele
 - `GET /pdf/{paper_id}`
 Serves the original PDF associated with a given paper.
 
+---
+
 ## Requirements
 
 - Python 3.11 or higher
@@ -115,6 +128,7 @@ Serves the original PDF associated with a given paper.
 
 - AWS credentials configured locally
 
+---
 
 ## Running Locally
 ### Backend
@@ -126,6 +140,7 @@ pip install -r requirements.txt
 cp .env.example .env
 uvicorn main:app --reload --port 3001
 ```
+---
 
 ### Frontend
 ```bash
@@ -133,6 +148,7 @@ cd rag-frontend
 npm install
 npm run dev
 ```
+---
 
 ### Project Structure
 ```text
@@ -153,6 +169,9 @@ rag-bedrock-fastapi-react/
 └── README.md
 ```
 
+---
+
+
 ## Intended Use
 
 This project is intended as:
@@ -164,6 +183,8 @@ This project is intended as:
 - A portfolio project demonstrating academic document retrieval and synthesis
 
 - It is not intended to be a production-ready system.
+
+---
 
 ## Author 
 Carlos Mario Quiroga
