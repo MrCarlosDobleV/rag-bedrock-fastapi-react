@@ -20,6 +20,7 @@ venv/
 # --- RAG data ---
 rag-backend/data/indexes/
 rag-backend/data/uploads/
+rag-backend/data/papers.json
 
 # --- AWS CLI bundle ---
 rag-backend/aws/
